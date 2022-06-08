@@ -21,12 +21,12 @@ function App() {
 				<div key={movie.id}>
 					<img src={movie.medium_cover_image} />
 					<h2>{movie.title}</h2>
-					<ul>
-						{movies.map((g) => {
-							<li key={movie.genres}>{movie.genres}</li>
-						})}
-					</ul>
 					<p>{movie.summary}</p>
+					<ul>
+						{movie.genres.map((g) => (
+							<li key={g}>{g}</li>
+						))}
+					</ul>
 				</div>
 			))}
 		</div>
