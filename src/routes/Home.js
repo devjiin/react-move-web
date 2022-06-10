@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
+import Header from "../components/Header";
 
 function Home(){
 	const [loading, setLoading] = useState(true);
@@ -18,6 +19,7 @@ function Home(){
 	}, []);
 	return(
 		<div>
+			<Header />
 		{loading ? (
 		  <h1>Loading...</h1>
 		) : (
